@@ -1,4 +1,4 @@
-FROM frankfang128/oh-my-docker:0.2-mangosteen
+FROM frankfang128/oh-my-docker:mangosteen
 
 
     
