@@ -1,5 +1,9 @@
 # 我的开发环境
 
+## 视频教程
+
+https://www.bilibili.com/video/BV1ZL4y1u7c4/
+
 ## 使用方法
 
 1. 安装最新版 Docker 客户端
