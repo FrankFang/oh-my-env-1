@@ -24,6 +24,7 @@
 		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=docker,target=/var/lib/docker,type=volume",
 		"source=pnpm-global,target=/usr/pnpm-global,type=volume",
+		"source=gems,target=/usr/local/rvm/gems,type=volume",
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "root",
