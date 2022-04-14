@@ -20,7 +20,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
     1. 运行 `nvm use system` 和 `node --version` 得到 node 运行环境
     2. 运行 `rvm use 3` 和 `ruby --version` 得到 ruby 运行环境
 
-## 如何 fq
+## 如何 trojan
 
 1. 运行 `code ~/.config/trojan.config`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
 2. 运行命令 `fq`
