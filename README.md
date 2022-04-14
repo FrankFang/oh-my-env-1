@@ -23,7 +23,8 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 ## 如何 fq
 
 1. 运行 `code ~/.config/trojan.config`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
-2. 运行命令 `fq`（这是我写在 bashrc 里的 alias）
+2. 运行命令 `fq`
+    * 这是我写在 bashrc 里的 alias，会去运行 `trojan` 命令
     * 这个命令会在后台运行，运行日志在 /tmp/trojan.log
     * 如果你想关闭它，可以运行 `killall trojan` 命令
 4. 运行 `code ~/.config/proxychains.conf`，将以下代码粘贴进去，其中 1080 是你的代理端口
