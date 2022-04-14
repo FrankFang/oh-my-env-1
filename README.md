@@ -27,7 +27,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
     * 这是我写在 bashrc 里的 alias，会去运行 `trojan` 命令
     * 这个命令会在后台运行，运行日志在 /tmp/trojan.log
     * 如果你想关闭它，可以运行 `killall trojan` 命令
-4. 运行 `code ~/.config/proxychains.conf`，将以下代码粘贴进去，其中 1080 是你的代理端口
+4. 运行 `code ~/.config/proxychains.conf`，将以下代码粘贴进去，其中 1080 是你的代理端口，然后保存文件
     
     ```
     strict_chain
