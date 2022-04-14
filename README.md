@@ -22,7 +22,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何 fq
 
-1. 下载 trojan 服务器的 JSON 配置文件到 ~/.config/trojan.config
+1. 下载你自己购买的 trojan 服务器的 JSON 配置文件到 ~/.config/trojan.config
 2. 运行命令 `fq`（我写在 bashrc 里的 alias），运行日志在 /tmp/trojan.log
 3. 在你的任意命令前加 pc 即可，例如：
     1. pc git clone git@xxxxx
