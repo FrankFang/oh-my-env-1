@@ -14,8 +14,11 @@
 	"runArgs": [
 		"--network=network1",
 		"--dns=114.114.114.114",
-		"--privileged",
+		"--privileged"
 	],
+	"containerEnv": {
+		"DISPLAY": "host.docker.internal:0.0"
+	},
 	"mounts": [
 		"source=root,target=/root,type=volume",
 		"source=chezmoi,target=/root/.local/share/chezmoi,type=volume",
@@ -24,10 +27,11 @@
 		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=docker,target=/var/lib/docker,type=volume",
 		"source=pnpm-global,target=/usr/pnpm-global,type=volume",
-		"source=gems,target=/usr/local/rvm/gems,type=volume",
+		"source=gems,target=/usr/local/rvm/gems,type=volume"
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "root",
+	// "shutdownAction": "none",
+	"remoteUser": "root"
 	// "overrideCommand": false,
 	// "forwardPorts": [],
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",

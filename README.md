@@ -1,5 +1,6 @@
 # 我的开发环境
 
+
 ## 视频教程
 
 https://www.bilibili.com/video/BV1ZL4y1u7c4/
@@ -19,3 +20,19 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 6. 等上一步启动完毕之后，新建终端
     1. 运行 `nvm use system` 和 `node --version` 得到 node 运行环境
     2. 运行 `rvm use 3` 和 `ruby --version` 得到 ruby 运行环境
+
+## 如何升级
+
+将 `.devcontainer/Dockerfile` 中的
+
+```
+FROM frankfang128/oh-my-docker:mangosteen
+```
+
+替换为
+
+```
+FROM frankfang128/oh-my-docker:<最新版本号>
+```
+
+其中最新版本号可以在 [DockerHub](https://hub.docker.com/repository/docker/frankfang128/oh-my-docker) 查看
