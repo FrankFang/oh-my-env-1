@@ -22,7 +22,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何 trojan
 
-1. 运行 `code ~/.config/trojan.config`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
+1. 运行 `code ~/.config/trojan.conf`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
 2. 运行命令 `fq`
     * 这是我写在 bashrc 里的 alias，会去运行 `trojan` 命令
     * 这个命令会在后台运行，运行日志在 /tmp/trojan.log
