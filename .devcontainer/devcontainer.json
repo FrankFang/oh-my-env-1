@@ -13,7 +13,7 @@
 	],
 	"runArgs": [
 		"--network=network1",
-		"--dns=114.114.114.114",
+		"--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
 		"--privileged"
 	],
 	"containerEnv": {
@@ -26,7 +26,7 @@
 		"source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
 		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=docker,target=/var/lib/docker,type=volume",
-		"source=pnpm-global,target=/usr/pnpm-global,type=volume",
+		"source=pnpm-bin,target=/root/.local/share/pnpm,type=volume",
 		"source=gems,target=/usr/local/rvm/gems,type=volume"
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
