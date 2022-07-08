@@ -23,19 +23,13 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何升级
 
-将 `.devcontainer/Dockerfile` 中的
+删掉本地的旧镜像即可：
 
-```
-FROM frankfang128/oh-my-docker:mangosteen
-```
-
-替换为
-
-```
-FROM frankfang128/oh-my-docker:<最新版本号>
+```bash
+docker rmi frankfang128/oh-my-docker:mangosteen
 ```
 
-其中最新版本号可以在 [DockerHub](https://hub.docker.com/repository/docker/frankfang128/oh-my-docker) 查看
+再次启动 VSCode 时会自动拉群最新镜像。
 
 ## 如何 trojan
 
