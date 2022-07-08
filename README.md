@@ -23,11 +23,17 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何升级
 
-删掉本地的旧镜像即可：
+1. 删掉本地的旧镜像
 
-```bash
-docker rmi frankfang128/oh-my-docker:mangosteen
-```
+    ```bash
+    docker rmi frankfang128/oh-my-docker:mangosteen
+    ```
+2. 下载最新的 oh-my-env-1 代码
+
+    ```bash
+    cd /path/to/oh-my-env-1
+    git pull
+    ```
 
 再次启动 VSCode 时会自动拉群最新镜像。
 
@@ -42,4 +48,4 @@ docker rmi frankfang128/oh-my-docker:mangosteen
 5. 在你的任意命令前加 pc 即可，例如：
     1. pc git clone git@xxxxx
     2. pc curl -L https://twitter.com
- 
+
