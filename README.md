@@ -23,19 +23,13 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何升级
 
-将 `.devcontainer/Dockerfile` 中的
+删掉本地的旧镜像即可：
 
-```
-FROM frankfang128/oh-my-docker:mangosteen
-```
-
-替换为
-
-```
-FROM frankfang128/oh-my-docker:<最新版本号>
+```bash
+docker rmi frankfang128/oh-my-docker:mangosteen
 ```
 
-其中最新版本号可以在 [DockerHub](https://hub.docker.com/repository/docker/frankfang128/oh-my-docker) 查看
+再次启动 VSCode 时会自动拉群最新镜像。
 
 ## 如何 trojan
 
@@ -44,18 +38,7 @@ FROM frankfang128/oh-my-docker:<最新版本号>
     * 这是我写在 bashrc 里的 alias，会去运行 `trojan` 命令
     * 这个命令会在后台运行，运行日志在 /tmp/trojan.log
     * 如果你想关闭它，可以运行 `killall trojan` 命令
-4. 运行 `code ~/.config/proxychains.conf`，将以下代码粘贴进去，其中 1080 是你的代理端口，然后保存文件
-    
-    ```
-    strict_chain
-    quiet_mode
-
-    remote_dns_subnet 224
-    tcp_read_time_out 15000
-    tcp_connect_time_out 8000
-    [ProxyList]
-    socks5 	127.0.0.1 1080
-    ```
+4. 如果你的本地代理端口不是 1080， 那么你需要运行 `code ~/.config/proxychains.conf`，将 1080 改为你的端口，然后保存文件
 5. 在你的任意命令前加 pc 即可，例如：
     1. pc git clone git@xxxxx
     2. pc curl -L https://twitter.com
