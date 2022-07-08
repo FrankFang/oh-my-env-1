@@ -8,8 +8,12 @@
 	"extensions": [
 		"golang.go",
 		"dbaeumer.vscode-eslint",
-		"asvetliakov.vscode-neovim",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"rebornix.ruby",
+		"castwide.solargraph",
+		"kaiwood.endwise",
+		"sianglim.slim",
+		"jnbt.vscode-rufo"
 	],
 	"runArgs": [
 		"--network=network1",
@@ -26,7 +30,7 @@
 		"source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
 		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=docker,target=/var/lib/docker,type=volume",
-		"source=pnpm-global,target=/usr/pnpm-global,type=volume",
+		"source=pnpm-bin,target=/root/.local/share/pnpm,type=volume",
 		"source=gems,target=/usr/local/rvm/gems,type=volume"
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
