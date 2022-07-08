@@ -1,1 +1,1 @@
-FROM frankfang128/oh-my-docker:0.2.6
+FROM frankfang128/oh-my-docker:mangosteen
