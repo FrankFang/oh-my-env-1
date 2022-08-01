@@ -16,18 +16,17 @@
 		"jnbt.vscode-rufo"
 	],
 	"runArgs": [
-		"--network=network1",
-		"--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
-		"--privileged"
+		// "--network=network1"
+		// "--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
+		// "--privileged"
 	],
 	"containerEnv": {
 		"DISPLAY": "host.docker.internal:0.0"
 	},
 	"mounts": [
-		"source=root,target=/root,type=volume",
+		"source=config,target=/root/.config,type=volume",
 		"source=chezmoi,target=/root/.local/share/chezmoi,type=volume",
 		"source=repos,target=/root/repos,type=volume",
-		"source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
 		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=docker,target=/var/lib/docker,type=volume",
 		"source=pnpm-bin,target=/root/.local/share/pnpm,type=volume",
