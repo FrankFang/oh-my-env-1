@@ -25,10 +25,10 @@
 	},
 	"mounts": [
 		"source=config,target=/root/.config,type=volume",
-		"source=chezmoi,target=/root/.local/share/chezmoi,type=volume",
 		"source=repos,target=/root/repos,type=volume",
+    "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
 		"source=go-bin,target=/root/go/bin,type=volume",
-		"source=docker,target=/var/lib/docker,type=volume",
+    // "source=docker,target=/var/lib/docker,type=volume",
 		"source=pnpm-bin,target=/root/.local/share/pnpm,type=volume",
 		"source=gems,target=/usr/local/rvm/gems,type=volume",
 		"source=ssh,target=/root/.ssh,type=volume"
