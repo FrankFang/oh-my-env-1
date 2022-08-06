@@ -16,8 +16,8 @@
 		"jnbt.vscode-rufo"
 	],
 	"runArgs": [
-		// "--network=network1"
-		// "--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
+		"--network=network1",
+		"--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
 		// "--privileged"
 	],
 	"containerEnv": {
