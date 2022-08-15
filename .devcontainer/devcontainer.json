@@ -24,14 +24,18 @@
 		"DISPLAY": "host.docker.internal:0.0"
 	},
 	"mounts": [
-		"source=config,target=/root/.config,type=volume",
-		"source=repos,target=/root/repos,type=volume",
-    "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
-		"source=go-bin,target=/root/go/bin,type=volume",
     // "source=docker,target=/var/lib/docker,type=volume",
+		"source=config,target=/root/.config,type=volume",
+    "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
+		"source=ssh,target=/root/.ssh,type=volume",
+		"source=go-bin,target=/root/go/bin,type=volume",
 		"source=pnpm-bin,target=/root/.local/share/pnpm,type=volume",
 		"source=gems,target=/usr/local/rvm/gems,type=volume",
-		"source=ssh,target=/root/.ssh,type=volume"
+    //
+    // 修改之前请看一下上面内容是否已经包含你需要的挂载
+    // 重复挂载将导致容器启动失败！
+    //
+		"source=repos,target=/root/repos,type=volume"
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "shutdownAction": "none",
