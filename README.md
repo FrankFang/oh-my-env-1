@@ -31,7 +31,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 2. 下载最新的 oh-my-env-1 代码
 
     ```bash
-    cd /path/to/oh-my-env-1
+    cd 你的oh-my-env-1所在的目录/oh-my-env-1
     git pull
     ```
 
