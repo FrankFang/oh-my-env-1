@@ -31,7 +31,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
     docker rmi frankfang128/oh-my-docker:mangosteen
     ```
 2. 更新 oh-my-env-1 
-    1. 如果你之前是直接了 oh-my-env-1 的源码，那么你只需要删除之前的 oh-my-env-1，下载最新的 oh-my-env-1，再次启动 VSCode 时就会自动拉群最新镜像。
+    1. 如果你之前是直接下载了 oh-my-env-1 的源码，那么你只需要删除之前的 oh-my-env-1，下载最新的 oh-my-env-1，再次启动 VSCode 时就会自动拉群最新镜像。
     2. 如果你之前是通过 git clone 获取的 oh-my-env-1，那么就需要在 oh-my-env-1 目录里执行 `git pull`，再次启动 VSCode 时就会自动拉群最新镜像。
 
 ## 如何 trojan
