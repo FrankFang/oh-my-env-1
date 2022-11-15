@@ -30,6 +30,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
     ```bash
     docker rmi frankfang128/oh-my-docker:mangosteen
+    # 如果你是 M1 用户，那么你需要把 oh-my-docker 改为 oh-my-docker-m1
     ```
 2. 删除之前的 oh-my-env 目录，下载最新的 oh-my-env，然后用 VSCode 打开，输入 Ctrl + Shift + P，然后输入 Reopen，回车，等待
     1. 如果你之前是用 `git clone` 下载的 oh-my-env-1，那么你也可以用 `git pull` 命令来更新代码
