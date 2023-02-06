@@ -12,6 +12,7 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
     1. 找到 Docker Engine 选项卡，配置 registry-mirrors（自行搜索教程）
     2. 找到 Resources 选项卡，配置 Proxies（可跳过）
 3. `git clone https://github.com/FrankFang/oh-my-env-1.git` 将 oh-my-env-1 下载到本地，重命名为 oh-my-env
+    1. mac M1 用户请将 `.devcontainer/Dockerfile` 文件中的 `oh-my-docker:mangosteen` 改为 `oh-my-docker-m1:mangosteen`
 4. 打开 Windows/Mac 的终端，运行 `docker network create network1`
 5. 打开 VSCode
     1. 安装 Dev Containers 插件
@@ -23,19 +24,16 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 
 ## 如何升级
 
+
+
 1. 删掉本地的旧镜像
 
     ```bash
     docker rmi frankfang128/oh-my-docker:mangosteen
+    # 如果你是 M1 用户，那么你需要把 oh-my-docker 改为 oh-my-docker-m1
     ```
-2. 下载最新的 oh-my-env-1 代码
-
-    ```bash
-    cd /path/to/oh-my-env-1
-    git pull
-    ```
-
-再次启动 VSCode 时会自动拉群最新镜像。
+2. 删除之前的 oh-my-env 目录，下载最新的 oh-my-env，然后用 VSCode 打开，输入 Ctrl + Shift + P，然后输入 Reopen，回车，等待
+    1. 如果你之前是用 `git clone` 下载的 oh-my-env-1，那么你也可以用 `git pull` 命令来更新代码
 
 ## 如何 trojan
 
