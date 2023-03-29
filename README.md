@@ -44,6 +44,9 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 3. 在 VSCode 中 rebuild 当前环境
 4. 获取宿主机的 IP，以 Clash 为例，点击 General 面板中的 Allow LAN 文字旁边的图标，就能获取 WSL 的 Address：172.29.xxx.x
 5. 回到 Docker 终端运行 `export all_proxy="socks5://172.29.xxx.x:1080"`，然后终端里的其他命令就能网速飞快地运行了
+6. 运行完了之后，把第 2 步里注释掉的 `--network` 改回来，重新 rebuild（此时代理就不能用了）
+
+这个方法略显麻烦，因为一旦你启用了 network，就不能访问宿主机；但不启用 network，开发又不是那么方便。
 
 ## 如何 trojan
 
