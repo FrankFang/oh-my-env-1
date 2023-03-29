@@ -35,6 +35,16 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 2. 删除之前的 oh-my-env 目录，下载最新的 oh-my-env，然后用 VSCode 打开，输入 Ctrl + Shift + P，然后输入 Reopen，回车，等待
     1. 如果你之前是用 `git clone` 下载的 oh-my-env-1，那么你也可以用 `git pull` 命令来更新代码
 
+## 如何使用宿主机的代理
+
+你的 docker 环境里访问外网会发现无法连接或者下载速度很慢，怎么才能用上宿主机的代理呢？步骤如下：
+
+1. 在 Docker 终端运行 `code /workspaces/oh-my-env/.devcontainer/devcontainer.json`
+2. 搜索 `--network`，找到这一行并注释掉或者删掉
+3. 在 VSCode 中 rebuild 当前环境
+4. 获取宿主机的 IP，以 Clash 为例，点击 General 面板中的 Allow LAN 文字旁边的图标，就能获取 WSL 的 Address：172.29.xxx.x
+5. 回到 Docker 终端运行 `export all_proxy="socks5://172.29.xxx.x:1080"`，然后终端里的其他命令就能网速飞快地运行了
+
 ## 如何 trojan
 
 1. 运行 `code ~/.config/trojan.conf`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
