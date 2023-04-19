@@ -38,6 +38,9 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
 ## 数据备份
 
 ```
+# 首次备份
+cp -r ~/repos /workspaces/oh-my-env/repos
+# 后续增量备份
 rsync -avz --delete  ~/repos  /workspaces/oh-my-env/repos
 ```
 
