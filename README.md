@@ -34,6 +34,12 @@ https://www.bilibili.com/video/BV1ZL4y1u7c4/
     ```
 2. 删除之前的 oh-my-env 目录，下载最新的 oh-my-env，然后用 VSCode 打开，输入 Ctrl + Shift + P，然后输入 Reopen，回车，等待
     1. 如果你之前是用 `git clone` 下载的 oh-my-env-1，那么你也可以用 `git pull` 命令来更新代码
+    
+## 数据备份
+
+```
+rsync -avz --delete  ~/repos  /workspaces/oh-my-env/repos
+```
 
 ## 如何使用宿主机的代理
 
