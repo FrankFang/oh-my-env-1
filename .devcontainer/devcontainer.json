@@ -16,16 +16,16 @@
 		"jnbt.vscode-rufo"
 	],
 	"runArgs": [
-		// "--privileged",
+		"--privileged",
 		// "--dns=114.114.114.114", // 如果你用的是长城宽带，在遇到网络不通的时候，可以删掉这一行
 		"--network=network1"
-		
+
 	],
 	"containerEnv": {
 		"DISPLAY": "host.docker.internal:0.0"
 	},
 	"mounts": [
-    // "source=docker,target=/var/lib/docker,type=volume",
+    "source=docker,target=/var/lib/docker,type=volume",
 		"source=config,target=/root/.config,type=volume",
     "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
 		"source=ssh,target=/root/.ssh,type=volume",
@@ -40,9 +40,9 @@
 	],
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "shutdownAction": "none",
-	"remoteUser": "root"
+	"remoteUser": "root",
 	// "overrideCommand": false,
 	// "forwardPorts": [],
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
-	// "postStartCommand": "rm /var/run/docker.pid; /usr/sbin/dockerd & /usr/sbin/sshd -D"
+	"postStartCommand": "[ -f /var/run/docker.pid ] && rm /var/run/docker.pid; dockerd"
 }
