@@ -44,5 +44,5 @@
 	// "overrideCommand": false,
 	// "forwardPorts": [],
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
-	"postStartCommand": "[ -f /var/run/docker.pid ] && rm /var/run/docker.pid; dockerd"
+	"postStartCommand": "nohup bash -c '/usr/sbin/dockerd &> /var/log/dockerd.log &' &> /dev/null"
 }
