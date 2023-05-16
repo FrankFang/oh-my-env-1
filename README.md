@@ -48,26 +48,5 @@ rsync -avz --delete  ~/repos  /workspaces/oh-my-env/repos
 
 ## 如何使用宿主机的代理
 
-你的 docker 环境里访问外网会发现无法连接或者下载速度很慢，怎么才能用上宿主机的代理呢？步骤如下：
-
-1. 在 Docker 终端运行 `code /workspaces/oh-my-env/.devcontainer/devcontainer.json`
-2. 搜索 `--network`，找到这一行并注释掉或者删掉
-3. 在 VSCode 中 rebuild 当前环境
-4. 获取宿主机的 IP，以 Clash 为例，点击 General 面板中的 Allow LAN 文字旁边的图标，就能获取 WSL 的 Address：172.29.xxx.x
-5. 回到 Docker 终端运行 `export all_proxy="socks5://172.29.xxx.x:1080"`，然后终端里的其他命令就能网速飞快地运行了
-6. 运行完了之后，把第 2 步里注释掉的 `--network` 改回来，重新 rebuild（此时代理就不能用了）
-
-这个方法略显麻烦，因为一旦你启用了 network，就不能访问宿主机；但不启用 network，开发又不是那么方便。
-
-## 如何 trojan
-
-1. 运行 `code ~/.config/trojan.conf`，将你自己购买的 trojan 服务器的 JSON 配置复制进去，保存文件
-2. 运行命令 `fq`
-    * 这是我写在 bashrc 里的 alias，会去运行 `trojan` 命令
-    * 这个命令会在后台运行，运行日志在 /tmp/trojan.log
-    * 如果你想关闭它，可以运行 `killall trojan` 命令
-4. 如果你的本地代理端口不是 1080， 那么你需要运行 `code ~/.config/proxychains.conf`，将 1080 改为你的端口，然后保存文件
-5. 在你的任意命令前加 pc 即可，例如：
-    1. pc git clone git@xxxxx
-    2. pc curl -L https://twitter.com
+直接在 Docker 客户端里设置代理即可。
 
