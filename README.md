@@ -46,5 +46,5 @@ rsync -avz --delete  ~/repos  /workspaces/oh-my-env/repos
 
 ## 如何使用宿主机的代理
 
-直接在 Docker 客户端里设置代理即可。
-
+* 方法一：直接在 Docker 客户端里设置代理即可。
+* 方法二：https://github.com/yuanlam/Clash-Linux#%E4%B8%89%E5%AE%89%E8%A3%85clash%E4%BD%BF%E7%94%A8yuanlam%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95
